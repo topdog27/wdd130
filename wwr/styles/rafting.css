@@ -1,104 +1,173 @@
-
+/* Root Variables for Colors and Styling */
 :root {
     --primary-color: #3d7cc9;
     --secondary-color: #b38e5d;
     --text-color: #9f2241;
-    --background-color: white;
+    --background-color: #ffffff;
     --accent-color: #4f4f4f;
-}
-
-
-body {
+  }
+  
+  /* Global Styles */
+  body {
     font-family: "Open Sans", sans-serif;
-    font-optical-sizing: auto;
-    font-style: normal;
-    font-variation-settings:
-    "wdth" 100;
     background-color: var(--background-color);
     color: var(--text-color);
     margin: 0;
     padding: 0;
-}
-
-
-header {
-    font-family: "Lexend", sans-serif;
-    font-optical-sizing: auto;
-    font-style: normal;   
-    display: flex;
+  }
+  
+  /* Header using CSS Grid */
+  header {
+    display: grid;
+    grid-template-columns: auto 1fr auto; /* Logo, title, nav */
     align-items: center;
-    justify-content: space-between;
     padding: 20px;
     background-color: var(--primary-color);
-}
-
-nav a {
+  }
+  
+  header img {
+    max-width: 100px;
+  }
+  
+  header h1 {
+    font-family: "Lexend", sans-serif;
+    font-size: 1.8rem;
+    margin: 0 20px;
+    color: white;
+  }
+  
+  /* Navigation styled with Flexbox */
+  nav {
+    display: flex;
+    justify-content: flex-end;
+    gap: 15px;
+  }
+  
+  nav a {
     color: white;
     text-decoration: none;
-    padding: 10px;
-}
-
-
-.hero {
+    font-weight: bold;
+  }
+  
+  /* Hero Section */
+  .hero {
     position: relative;
-    text-align: center;
-}
-
-.hero img {
-    display: block;
+  }
+  
+  .hero figure {
+    margin: 0;
+    position: relative;
+  }
+  
+  .hero img {
     width: 100%;
     height: auto;
-}
-
-.hero h1 {
+    display: block;
+  }
+  
+  .hero figcaption {
     position: absolute;
-    top: 50%;
+    bottom: 20px;
     left: 50%;
-    transform: translate(-50%, -50%);
+    transform: translateX(-50%);
     color: white;
-    font-size: 2rem;
-}
-
-
-article {
-    position: absolute;
-    top: 60%;
-    left: 10%;
-    background-color: rgba(255, 255, 255, 0.8);
+    font-size: 1.5rem;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 10px 20px;
+    border-radius: 5px;
+  }
+  
+  /* History Section */
+  .history {
     padding: 20px;
-    max-width: 300px;
-}
-
-article img {
-    float: right;
-    width: 100px;
-    margin-left: 10px;
-}
-
-
-section h2 {
+    text-align: center;
+  }
+  
+  .history h2 {
     color: var(--primary-color);
+    margin-bottom: 10px;
+  }
+  
+  .history p {
+    max-width: 800px;
+    margin: 0 auto 20px;
+    line-height: 1.6;
+  }
+  
+  .history figure {
+    margin: 0 auto;
+    max-width: 300px;
+  }
+  
+  .history figure img {
+    width: 100%;
+    display: block;
+  }
+  
+  .history figure figcaption {
+    font-size: 0.9rem;
+    color: var(--accent-color);
     text-align: center;
-}
-
-
-section img {
-    width: 150px;
+  }
+  
+  /* Adventures Section */
+  .adventures {
+    padding: 20px;
+    text-align: center;
+  }
+  
+  .adventures h2 {
+    color: var(--primary-color);
+    margin-bottom: 20px;
+  }
+  
+  .adventure-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+  }
+  
+  .adventure-gallery figure {
+    margin: 0;
+    width: calc(20% - 15px); /* Five images spanning across the section */
+    min-width: 150px;
+  }
+  
+  .adventure-gallery img {
+    width: 100%;
     height: auto;
-    margin: 5px;
-}
-
-
-footer {
-    text-align: center;
-    padding: 15px;
+    display: block;
+  }
+  
+  .adventure-gallery figcaption {
+    font-size: 0.9rem;
+    color: var(--accent-color);
+    margin-top: 5px;
+  }
+  
+  /* Footer Section */
+  footer {
     background-color: var(--primary-color);
     color: white;
-}
-
-footer a img {
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  
+  footer p {
+    margin: 5px 0;
+  }
+  
+  .social-icons {
+    display: flex;
+    gap: 10px;
+  }
+  
+  .social-icons a img {
     width: 30px;
     height: 30px;
-    margin: 10px;
-    text-decoration: none;
-}
+  }
+  
